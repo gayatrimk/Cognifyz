@@ -1,68 +1,62 @@
 import java.util.Scanner;
+
 public class Temp_Con {
-    public static float cel_feh(double temp)
-    {
-        if(temp<-273.15)
-        {
+    public static float cel_feh(double temp) {
+        if (temp < -273.15) {
             System.out.println("Lowest possible temperature is -273.15 degrees Celsius.");
             return -1;
         }
-        return (float) (temp*9/5 + 32);
+        return (float) (temp * 9 / 5 + 32);
     }
-    public static float feh_cel(double temp)
-    {
-        if(temp<-460)
-        {
+
+    public static float feh_cel(double temp) {
+        if (temp < -460) {
             System.out.println("Lowest possible temperature is -460 degrees Fahrenheit.");
             return -1;
         }
-        return (float) ((temp - 32) *5/9);
+        return (float) ((temp - 32) * 5 / 9);
     }
-    public static float cel_kel(double temp)
-    {
-        if(temp<-273.15)
-        {
+
+    public static float cel_kel(double temp) {
+        if (temp < -273.15) {
             System.out.println("Lowest possible temperature is -273.15 degrees Celsius.");
             return -1;
         }
         return (float) (temp + 273.15);
     }
-    public static float kel_cel(double temp)
-    {
-        if(temp<0)
-        {
+
+    public static float kel_cel(double temp) {
+        if (temp < 0) {
             System.out.println("Lowest possible temperature is 0 Kelvin.");
             return -1;
         }
         return (float) (temp - 273.15);
     }
-    public static float kel_feh(double temp)
-    {
-        if(temp<0)
-        {
+
+    public static float kel_feh(double temp) {
+        if (temp < 0) {
             System.out.println("Lowest possible temperature is 0 Kelvin.");
             return -1;
         }
-        return (float) ((temp- 273.15) * 9/5 + 32);
+        return (float) ((temp - 273.15) * 9 / 5 + 32);
     }
-    public static float feh_kel(double temp)
-    {
-        if(temp<-460)
-        {
+
+    public static float feh_kel(double temp) {
+        if (temp < -460) {
             System.out.println("Lowest possible temperature is -460 degrees Fahrenheit.");
             return -1;
         }
-        return (float) (((temp-32)*5/9) + 273.15);
+        return (float) (((temp - 32) * 5 / 9) + 273.15);
     }
 
     public static void main(String[] args) {
         System.out.println("### Welcome to Temperature Converter ###");
-        Scanner input=new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int ch;
-        float t1=0;
+        float t1 = 0;
         do {
             System.out.println("Menu:\n1.Celsius to Fahrenheit\n2.Fahrenheit to Celsius\n3.Celsius to Kelvin\n4.Kelvin to Celsius\n5.Fahrenheit to Kelvin\n6.Kelvin to Fahrenheit\nEnter your Choice");
-            ch=input.nextInt();
+            ch = input.nextInt();
             if (ch < 7) {
                 System.out.println("Enter temperature:");
                 t1 = input.nextFloat();
@@ -79,7 +73,7 @@ public class Temp_Con {
                 }
             }
         }
-        while (ch<7);
+        while (ch < 7);
 
 
         System.out.println("Exit.\nThanks for using this Program!!!");
